@@ -1,12 +1,13 @@
 function firstWord(s) {
-	const trimmedStr = str.trim();
+	if (str.trim() === '' || !str.includes(' ')) {
+    return str;
+  }
 
-  // Find the index of the first space
-  const spaceIndex = trimmedStr.indexOf(' ');
+  // Extract the first word (characters up to the first space)
+  const firstSpaceIndex = str.indexOf(' ');
+  const firstWord = str.slice(0, firstSpaceIndex);
 
-  // Return the first word or the entire string if no space is found
-  return spaceIndex !== -1 ? trimmedStr.slice(0, spaceIndex) : trimmedStr;
-  // your code here
+  return firstWord;
 }
 
 // // Do not change the code below 
